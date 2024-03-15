@@ -91,7 +91,6 @@ const SignInPage = () => {
                     <h1 className="text-3xl font-semibold mb-6 text-black text-center">Sign Up</h1>
 
                     <form onSubmit={handleSubmit(handleSubmitForm)}>
-
                         <div>
                             <label htmlFor="username" className="block text-sm font-medium text-gray-700">Name</label>
                             <input type="text" id="name" {...register("name")} className="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300" />
