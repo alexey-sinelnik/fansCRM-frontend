@@ -1,3 +1,5 @@
+import Cookies from "js-cookie";
+
 export const useAuth = () => {
-    return !!sessionStorage.getItem('token')
+    return !!Cookies.get('token')
 }

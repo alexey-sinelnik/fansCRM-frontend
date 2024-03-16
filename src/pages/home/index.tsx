@@ -16,7 +16,6 @@ const HomePage = () => {
 
     const handleLogout = () => {
         dispatch(logout())
-        sessionStorage.removeItem('token')
         navigate('/login')
     }
 

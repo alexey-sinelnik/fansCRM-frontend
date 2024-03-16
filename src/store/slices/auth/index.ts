@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getAllUsers, loginUser, registerUser } from "../../thunks/auth";
 import { IAuthState, IPublicUser } from "../../../common/interfaces/auth";
+import Cookies from "js-cookie";
+
 
 const initialState: IAuthState = {
     user: {} as IPublicUser,
@@ -14,6 +16,7 @@ export const authSlice = createSlice({
         logout: (state) => {
             state.user = {} as IPublicUser
             state.users = []
+            Cookies.remove('token')
         }
     },
     extraReducers: (builder) => {
